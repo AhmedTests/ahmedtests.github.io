@@ -1,5 +1,31 @@
-/* Typography */
+/*
+ * CSS for the moving bubbles
+ * Makes sure the bubble container appears behind the contents of the page
+ * Gerard Godone-Maresca
+ */
+ html, body {
+	padding:0;
+	margin:0;
+	min-height:100%;
+	background-color:#50afe4;
+	background-image:linear-gradient(to bottom,#57B7E0,#3C799D);
+	background-attachment:fixed;
+}
+html * { z-index: 1; position:relative; }
+#bubbleContainer {
+	z-index:0;
+	overflow:hidden;
+	position:fixed;
+	height:100%;
+	width:100%;
+}
+#bubbleContainer div {
+	position:fixed;
+	z-index:-1;
+	border-radius:1000px;
+}
 
+/* Typography */
 html {
 	font-family: 'Roboto', sans-serif;
 }
@@ -50,8 +76,13 @@ main > .intro {
 }
 
 main > .tagline {
+	font-family: 'Reem Kufi', sans-serif;
+	font-size: 2em;
+	font-weight: 300;
+}
+
+main > .hashtags {
 	font-size: 1.5rem;
-	margin: 1.5rem 0;
 	font-weight: 100;
 }
 
